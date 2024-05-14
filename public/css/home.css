@@ -1,0 +1,74 @@
+body{
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 65%, rgba(238,174,202,1) 100%);
+}
+
+.contact-div{
+    width: 25%;
+    padding-bottom: 20px;
+    background-color: #ffff;
+    border-radius: 16px;
+}
+.contact-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-div{
+    width: 60%;
+    margin-top: -80px;
+    border: none;
+}
+.img-div img{
+    width: 100%;
+    border-radius:12px;
+}
+.name-tag{
+    margin: 0px;
+    padding-top: 20px;
+    text-align: center;
+}
+.social-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-icon svg{
+    padding: 4px;
+    filter: drop-shadow(rgb(163, 152, 152) 0.5rem 0.5rem 10px);
+}
+.constact-info{
+  
+    border-radius: 16px;
+    background-color: rgb(231, 224, 224);
+    margin: 8px;
+    padding: 12px;
+    padding-top: 16px;
+    padding-left:20px
+}
+.cont{
+    margin-left: 20px;
+}
+
+hr {
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+    border: 0;
+    border-top: 1px solid black;
+  }
+.contact-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}  
+.inform-div{
+   width: 50%;
+   background-color: #ffff;
+   border-radius: 16px;
+
+}
+.inform-navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
