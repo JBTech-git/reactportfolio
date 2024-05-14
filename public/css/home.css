@@ -3,7 +3,8 @@ body{
 }
 
 .contact-div{
-    width: 25%;
+    width: 30%;
+    /* height: 28rem; */
     padding-bottom: 20px;
     background-color: #ffff;
     border-radius: 16px;
@@ -62,13 +63,18 @@ hr {
     margin: 20px 0px;
 }  
 .inform-div{
-   width: 50%;
+   width: 55%;
    background-color: #ffff;
    border-radius: 16px;
 
 }
-.inform-navbar{
+/* .inform-navbar{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+} */
+
+.nav-div{
+    width: 10%;
+    height: 25rem;
 }

@@ -4,7 +4,7 @@ import avtar from '../../public/img/avtar.webp';
 export default function Home() {
     return (
         <section className='home-section'>
-            <div className='d-flex justify-content-center m-5 pt-5'>
+            <div className='d-flex justify-content-around m-5 pt-5'>
                     <div className='contact-div'>
                         <div className='contact-img'>
                             <div className='img-div'>
@@ -59,6 +59,9 @@ export default function Home() {
                       <div className='inform-navbar'>
 
                       </div>  
+                </div>
+                <div className='nav-div bg-white rounded'>
+
                 </div>
             </div>
         </section>
