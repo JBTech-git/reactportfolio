@@ -5,7 +5,7 @@ import Navbar from '../componant/Navbar';
 export default function Resume() {
   return (
    <section>
-    <div className="d-flex justify-content-around m-5 pt-5">
+    <div className="d-flex justify-content-around m-3 mt-5 pt-4">
         <Contactbar/>
         <div className="inform-div">
           <div className="inform-navbar">

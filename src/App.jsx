@@ -1,6 +1,6 @@
 import react from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import  '../public/css/home.css';
+
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './view/Home.jsx'
 import About from './view/About.jsx'
@@ -11,13 +11,16 @@ import Portfolio from './view/Portfolio.jsx';
 import Blog from './view/Blog.jsx';
 import Contact from './view/Contact.jsx';
 
+import  '../public/assets/css/home.css';
+import '../public/assets/css/navbar.css';
+
 
 
 function App() {
   const router = createBrowserRouter([
     {
       path:'/',
-      element: <Home/>
+      element: <About/>
     },
     {
       path:'/about',
