@@ -1,0 +1,9 @@
+/* .active-link {
+    background-color: blue !important;
+    color: blue !important;
+  } */
+
+.navicon-div:hover{
+    background-color: blue ;
+    color:white;
+}
