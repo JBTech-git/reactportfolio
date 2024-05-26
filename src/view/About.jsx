@@ -37,7 +37,7 @@ const features = [
 
 
 export default function About() {
-  const [windowWidth, setWIndowWidth] = useState(window.innerWidth< 768)
+ 
   return (
     <section>
       <div className="d-flex justify-content-around m-3 mt-5 pt-4">
@@ -94,7 +94,7 @@ export default function About() {
             copy write @ Jayanta Barman
           </div>
         </div>
-        <div className="nav-div bg-white rounded">
+        <div className="nav-div rounded">
           <Navbar />
         </div>
       </div>

@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
+import { useMediaQuery } from "react-responsive";
 import avtar from "../../public/img/avtar.webp";
 
 export default function Contactbar() {
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+
   return (
     <>
-    <div className="contact-div">
+      {!isMobile && (
+        <div className="contact-div">
           <div className="contact-img">
             <div className="img-div">
               <img src={avtar} alt="" />
@@ -233,6 +237,13 @@ export default function Contactbar() {
             </button>
           </div>
         </div>
+      )}
+
+      {isMobile && (
+        <div className="nev-contactbar">
+          <img style={{ width: "50px" }} src={avtar} alt="" />
+        </div>
+      )}
     </>
-  )
+  );
 }
