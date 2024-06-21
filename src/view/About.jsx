@@ -40,7 +40,7 @@ export default function About() {
  
   return (
     <section>
-      <div className="d-flex justify-content-around m-3 mt-5 pt-4">
+      <div className="d-flex justify-content-around m-5 pt-2">
         <Contactbar />
 
         <div className="inform-div">
@@ -86,7 +86,6 @@ export default function About() {
             </div>
           </div>
           <div className="bg-secondary bg-opacity-10 text-center">
-            Clients !
 
             {/* <ClientCarasole/> */}
           </div>

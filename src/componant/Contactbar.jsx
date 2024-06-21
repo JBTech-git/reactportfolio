@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import Marquee from "react-fast-marquee";
 import avtar from "../../public/img/avtar.webp";
+import { motion } from "framer-motion";
+import cross from "../../public/assets/icon/wrong.svg";
 
 export default function Contactbar() {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const [isContactVisible, setIsContactVisible] = useState(false);
+
+  const toggleContactVisibility = () => {
+    setIsContactVisible(!isContactVisible);
+  };
+
+  const handleCloseContact = () => {
+    setIsContactVisible(false);
+  };
+
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  };
 
   return (
     <>
@@ -16,7 +33,13 @@ export default function Contactbar() {
           </div>
           <div className="name-tag">
             <h4>Jayanta Barman</h4>
-            <p>Developer</p>
+            <div className="text-center" style={{ margin: "0px 30%" }}>
+              <Marquee className="">
+                <p className="h5 px-2">Developer |</p>
+                <p className="h5 px-2">Programmer |</p>
+                <p className="h5 px-2">UX/UI Designer |</p>
+              </Marquee>
+            </div>
           </div>
           <div className="social-icon">
             <svg
@@ -239,10 +262,75 @@ export default function Contactbar() {
         </div>
       )}
 
+      {/* for mobile phone  */}
       {isMobile && (
-        <div className="nev-contactbar">
-          <img style={{ width: "50px" }} src={avtar} alt="" />
-        </div>
+        <>
+          <div className="nev-contactbar" onClick={toggleContactVisibility}>
+            <img style={{ width: "50px" }} src={avtar} alt="" />
+          </div>
+
+          {isContactVisible && (
+            <motion.div
+              animate={isContactVisible ? "open" : "closed"}
+              variants={variants}
+              className={`mob-contact-div bg-secondary `}
+            >
+              <div className="d-flex justify-content-end">
+                <button
+                  className="bg-transparent border-0 mt-2 me-2"
+                  onClick={handleCloseContact}
+                >
+                  <img src={cross} alt="" />
+                </button>
+              </div>
+
+              <div className="mobile-img-div text-center">
+                <img src={avtar} alt="Avatar" />
+              </div>
+              <div className="name-tag text-white">
+                <h2>Jayanta Barman</h2>
+                <div className="text-center" style={{ margin: "0px 33%" }}>
+                  <Marquee className="">
+                    <p className="h5 px-2">Developer |</p>
+                    <p className="h5 px-2">Programmer |</p>
+                    <p className="h5 px-2">UX/UI Designer |</p>
+                  </Marquee>
+                </div>
+              </div>
+              <div className="social-icon">{/* SVG icons */}</div>
+              <div className="constact-info">
+                <div className="d-flex justify-content-start align-items-center">
+                  <div className="">{/* SVG Phone Icon */}</div>
+                  <div className="cont">
+                    <small>Phone</small>
+                    <p>8388988586</p>
+                  </div>
+                </div>
+                <hr />
+                <div className="d-flex justify-content-start align-items-center">
+                  <div>{/* SVG Email Icon */}</div>
+                  <div className="cont">
+                    <small>Email</small>
+                    <p>bjayanta584@gmail.com</p>
+                  </div>
+                </div>
+                <hr />
+                <div className="d-flex justify-content-start align-items-center">
+                  <div>{/* SVG Location Icon */}</div>
+                  <div className="cont">
+                    <small>Location</small>
+                    <p>8388988586</p>
+                  </div>
+                </div>
+              </div>
+              <div className="contact-btn">
+                <button type="button" className="btn btn-primary">
+                  Download CV
+                </button>
+              </div>
+            </motion.div>
+          )}
+        </>
       )}
     </>
   );
